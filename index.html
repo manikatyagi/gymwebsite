@@ -46,28 +46,32 @@
         </div>
         <div class="container">
             <h1>Fill the details to join gym!!!</h1>
-            <form action="noaction.php">
-                <div class="form-grp">
-                    <input type="text" name="" placeholder="Enter your name">
+            <form aciton ="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+                <div class="form-grp" id="name">
+                    <input type="text" name="fname" placeholder="Enter your name" required><b><span class="formerror"> </span></b>
                 </div>
-                <div class="form-grp">
-                    <input type="text" name="" placeholder="Enter your email-address">
+                <div class="form-grp" id="email">
+                    <input type="text" name="femail" placeholder="Enter your email-address" required><b><span class="formerror"> </span></b>
                 </div>
-                <div class="form-grp">
-                    <input type="text" name="" placeholder="Enter your phone number">
+                <div class="form-grp" id="phone">
+                    <input type="phone" name="fphone" placeholder="Enter your phone number" required><b><span class="formerror"> </span></b>
                 </div>
-                <div class="form-grp">
-                    <input type="text" name="" placeholder="Enter your gender ">
+                <div class="form-grp" id="gen">
+                    <input type="text" name="fgen" placeholder="Enter your gender " required><b><span class="formerror"> </span></b>
                 </div>
-                <div class="form-grp">
-                    <input type="text" name="" placeholder="Enter your age ">
+                <div class="form-grp" id="age">
+                    <input type="number" name="fage" placeholder="Enter your age "min="13" max="60" required><b><span class="formerror"> </span></b>
                 </div>
-                <button class="btn">submit</button>
+                <button class="btn" type="submit">Send</button>
             </form>
         </div>
-
+       
     </header>
     
+    <script src="index.js"></script>
+
 </body>
 
 </html>
+
+

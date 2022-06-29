@@ -20,7 +20,7 @@ function validateForm(){
     clearErrors();
 
     //perform validation and if validation fails, set the value of returnval to false
-    var name = document.forms['myForm']["fname"].value;
+    var name = document.forms['myForm']["myname"].value;
     if (name.length<5){
         seterror("name", "*Length of name is too short");
         returnval = false;
@@ -31,27 +31,17 @@ function validateForm(){
         returnval = false;
     }
 
-    var email = document.forms['myForm']["femail"].value;
+    var email = document.forms['myForm']["myemail"].value;
     if (email.length>15){
         seterror("email", "*Email length is too long");
         returnval = false;
     }
 
-    var phone = document.forms['myForm']["fphone"].value;
+    var phone = document.forms['myForm']["myphone"].value;
     if (phone.length != 10){
         seterror("phone", "*Phone number should be of 10 digits!");
         returnval = false;
     }
-
-    var age = document.forms['myForm']["fage"].value;
-    if(age>60 && age<13){
-        seterror("age","* people over the age of 13 and under the age of 60 are permitted.");
-        returnval=false;
-    }
-
-    
-
-
     return returnval;
 }
 
